@@ -23,7 +23,7 @@ export default function Intro() {
         <h1>
           Hi, I'm
           <strong>
-            <span>Ricardo Silvaa</span>
+            <span>Ricardo Silva</span>
           </strong>
         </h1>
         <p>Web Developer</p>
