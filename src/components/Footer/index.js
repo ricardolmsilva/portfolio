@@ -1,45 +1,75 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+
 import { FaGithub, FaDribbble, FaLinkedinIn } from "react-icons/fa"
 
 import { FooterContainer } from "./styles"
 
 export default function Footer() {
+  const data = useStaticQuery(
+    graphql`
+      query {
+        allSite {
+          nodes {
+            siteMetadata {
+              contacts {
+                dribbble {
+                  alt
+                  url
+                }
+                email {
+                  url
+                  alt
+                }
+                github {
+                  alt
+                  url
+                }
+                linkedin {
+                  alt
+                  url
+                }
+              }
+            }
+          }
+        }
+      }
+    `
+  )
+  const { contacts } = data.allSite.nodes[0].siteMetadata
+
   return (
     <FooterContainer id="footer">
-      <a
-        href="mailto:ricardolmsilva@me.com"
-        className="footer__link"
-        alt="Send me an email"
-      >
-        ricardolmsilva@me.com
+      <a href={`mailto:${contacts.email.url}`} alt={contacts.email.alt}>
+        {contacts.email.url}
       </a>
       <ul className="social-list">
         <li className="social-list__item">
           <a
-            href="https://github.com/ricardolmsilva"
+            href={contacts.github.url}
             target="_blank"
             rel="noopener noreferrer"
-            alt="Go to my Github profile"
+            alt={contacts.github.alt}
           >
             <FaGithub />
           </a>
         </li>
         <li className="social-list__item">
           <a
-            href="https://dribbble.com/ricardolmsilva"
+            href={contacts.dribbble.url}
             target="_blank"
             rel="noopener noreferrer"
-            alt="Go to my Dribbble profile"
+            alt={contacts.dribbble.alt}
           >
             <FaDribbble />
           </a>
         </li>
         <li className="social-list__item">
           <a
-            href="https://linkedin.com/in/ricardolmsilva"
+            href={contacts.linkedin.url}
             target="_blank"
             rel="noopener noreferrer"
-            alt="Go to my LinkedIn profile"
+            alt={contacts.linkedin.alt}
           >
             <FaLinkedinIn />
           </a>

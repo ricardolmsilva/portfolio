@@ -1,12 +1,14 @@
 export default {
   fonts: {
-    primary: "Montserrat, Helvetica, Arial, sans-serif",
+    primary: "Montserrat, Arial, sans-serif",
   },
   colors: {
     primary: "#101010",
     secondary: "#fff",
-    background_dark: "#f5f5f5",
-    background_light: "#fff",
+  },
+  backgrounds: {
+    primary: "#f5f5f5",
+    secondary: "#fff",
   },
   breakpoints: {
     tablet: "only screen and (max-width: 768px)",

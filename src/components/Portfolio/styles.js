@@ -50,7 +50,11 @@ export const ProjectButtons = styled.div`
 
   a {
     color: ${props => props.theme.colors.secondary};
+    transition: box-shadow 0.5s;
 
+    &:hover {
+      box-shadow: ${props => props.theme.shadows.primary};
+    }
     div {
       display: flex;
       justify-content: center;

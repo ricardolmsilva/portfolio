@@ -3,22 +3,16 @@ import styled from "styled-components"
 export const Container = styled.section`
   background: ${props =>
     props.background
-      ? props.theme.colors.background_dark
-      : props.theme.colors.background_light};
+      ? props.theme.backgrounds.primary
+      : props.theme.backgrounds.secondary};
 
   > div {
     display: grid;
-    grid-template-columns: repeat(12fr);
-    gap: 32px;
     max-width: 1100px;
     min-height: ${props => (props.viewportHeight ? "100vh" : "none")};
     margin: 0 auto;
     padding: 48px;
 
-    @media ${props => props.theme.breakpoints.tabled} {
-      grid-template-columns: repeat(6fr);
-      gap: 16px;
-    }
     @media ${props => props.theme.breakpoints.mobile} {
       padding: 48px 24px;
     }

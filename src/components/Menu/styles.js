@@ -2,17 +2,18 @@ import styled from "styled-components"
 
 export const Hamburger = styled.button`
   position: fixed;
-  right: 30px;
-  top: 30px;
+  right: 41px;
+  top: 41px;
   z-index: 9999;
-  padding: 5px;
+  padding: 7px;
   background: none;
   border: 0;
   cursor: pointer;
+  transition: top 0.5s, right 0.5s;
 
   @media ${props => props.theme.breakpoints.tablet} {
-    top: 15px;
-    right: 15px;
+    top: 17px;
+    right: 17px;
   }
 
   &:focus {
@@ -24,7 +25,7 @@ export const Hamburger = styled.button`
 
     &::before {
       ${props =>
-        props.openedMenu && "transform: rotate(90deg) translateX(-6px)"};
+        props.openedMenu && "transform: rotate(90deg) translateX(-10px)"};
     }
 
     &::after {
@@ -37,21 +38,21 @@ export const Hamburger = styled.button`
     position: relative;
 
     &::before {
-      top: 6px;
+      top: 10px;
     }
 
     &::after {
-      bottom: 6px;
+      bottom: 10px;
     }
   }
 
   span,
   span::before,
   span::after {
-    width: 25px;
-    height: 2px;
+    width: 35px;
+    height: 3px;
     border-radius: 2px;
-    transition: transform 250ms ease-in-out, background 250ms ease-in-out;
+    transition: transform 0.3s, background 0.3s;
     box-shadow: ${props => props.theme.shadows.primary};
     background: ${props =>
       props.openedMenu
@@ -75,7 +76,7 @@ export const MenuContainer = styled.div`
   left: 0;
   right: 0;
   background: ${props => props.theme.colors.primary};
-  padding: 50px 20px;
+  padding: 70px 20px;
   z-index: 100;
 
   display: flex;
@@ -99,10 +100,6 @@ export const MenuContainer = styled.div`
     outline: none;
     font-size: 25px;
     cursor: pointer;
-
-    @media ${props => props.theme.breakpoints.mobile} {
-      font-size: 35px;
-    }
 
     &::after {
       content: " ";

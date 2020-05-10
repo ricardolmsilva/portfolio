@@ -9,7 +9,7 @@ export default function Intro() {
     query PhotoImage {
       image: file(relativePath: { eq: "photo.png" }) {
         childImageSharp {
-          fluid(quality: 80) {
+          fluid {
             ...GatsbyImageSharpFluid
           }
         }

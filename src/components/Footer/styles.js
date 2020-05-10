@@ -10,12 +10,15 @@ export const FooterContainer = styled.footer`
   a {
     color: inherit;
     text-decoration: none;
-  }
+    transition: opacity 0.3s;
 
-  .footer__link:hover,
-  .social-list__link:hover {
-    text-decoration: underline;
-    opacity: 0.7;
+    &:hover {
+      opacity: 0.6;
+    }
+
+    svg {
+      font-size: 20px;
+    }
   }
 
   .social-list {
@@ -26,6 +29,6 @@ export const FooterContainer = styled.footer`
   }
 
   .social-list__item {
-    margin: 0 2px;
+    margin: 0 7px;
   }
 `

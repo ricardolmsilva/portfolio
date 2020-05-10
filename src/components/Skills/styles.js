@@ -12,15 +12,17 @@ export const SkillsContainer = styled.div`
     justify-content: space-around;
   }
 
-  @media ${props => props.theme.breakpoints.mobilexs} {
-    grid-template-columns: repeat(1, max-content);
-    gap: 60px 0;
-    justify-content: space-around;
-  }
-
   h3 {
     text-align: center;
     margin-bottom: 20px;
+  }
+
+  @media ${props => props.theme.breakpoints.mobilexs} {
+    grid-template-columns: repeat(1, 1fr);
+
+    h3 {
+      text-align: left;
+    }
   }
 
   li {
