@@ -29,6 +29,7 @@ html, body{
   }
 }
 `
+
 export const wrapRootElement = ({ element }) => (
   <ThemeProvider theme={LightTheme}>
     <GlobalStyles />
