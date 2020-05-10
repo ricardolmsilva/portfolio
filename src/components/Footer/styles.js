@@ -2,10 +2,7 @@ import styled from "styled-components"
 
 export const FooterContainer = styled.footer`
   padding: 48px;
-  color: var(--clr-dark);
   text-align: center;
-  font-size: var(--fs-h3);
-  font-weight: var(--fw-bold);
 
   a {
     color: inherit;
@@ -24,7 +21,7 @@ export const FooterContainer = styled.footer`
   .social-list {
     display: flex;
     justify-content: center;
-    margin: 32px 0 0;
+    margin-top: 32px;
     padding: 0;
   }
 

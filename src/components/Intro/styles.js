@@ -17,12 +17,11 @@ export const IntroContainer = styled.div`
     @media ${props => props.theme.breakpoints.mobile} {
       width: 100%;
       grid-template-columns: 1fr;
+      gap: 25px 0;
       grid-template-areas:
         "title"
         "subtitle"
         "image";
-
-      gap: 25px 0;
     }
 
     h1 {

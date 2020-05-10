@@ -17,7 +17,7 @@ export const SkillsContainer = styled.div`
     margin-bottom: 20px;
   }
 
-  @media ${props => props.theme.breakpoints.mobilexs} {
+  @media ${props => props.theme.breakpoints.xsmobile} {
     grid-template-columns: repeat(1, 1fr);
 
     h3 {

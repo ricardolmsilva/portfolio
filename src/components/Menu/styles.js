@@ -29,7 +29,7 @@ export const Hamburger = styled.button`
     }
 
     &::after {
-      ${props => props.openedMenu && "display: none"}
+      ${props => props.openedMenu && "display: none"};
     }
   }
 
@@ -69,7 +69,7 @@ export const Hamburger = styled.button`
   }
 `
 
-export const MenuContainer = styled.div`
+export const MenuContainer = styled.nav`
   position: fixed;
   top: 0;
   bottom: 0;

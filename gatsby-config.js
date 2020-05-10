@@ -33,6 +33,8 @@ module.exports = {
     `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-styled-components`,
+    `babel-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
@@ -43,12 +45,6 @@ module.exports = {
           },
         ],
       },
-    },
-    {
-      resolve: `gatsby-plugin-styled-components`,
-      // options: {
-      //   displayName: process.env.NODE_ENV !== "production",
-      // },
     },
     {
       resolve: `gatsby-source-filesystem`,
