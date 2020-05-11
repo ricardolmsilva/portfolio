@@ -18,8 +18,8 @@
 ## :computer: Project
 
 This is the code of my portfolio.
-
-To have a look in live click in the link bellow.</br>
+To see it in live just click in the link below.
+</br>
 </br>
 [Go to demo](https://ricardosilva.dev)
 </br>
