@@ -53,7 +53,7 @@ export const Hamburger = styled.button`
     height: 3px;
     border-radius: 2px;
     transition: transform 0.3s, background 0.3s;
-    box-shadow: ${props => props.theme.shadows.primary};
+
     background: ${props =>
       props.openedMenu
         ? props.theme.colors.secondary
