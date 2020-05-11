@@ -1,6 +1,8 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
+import { FaChevronDown } from "react-icons/fa"
+import scrollTo from "gatsby-plugin-smoothscroll"
 
 import { IntroContainer, ImageContainer } from "./styles"
 
@@ -35,6 +37,7 @@ export default function Intro() {
           />
         </ImageContainer>
       </div>
+      <FaChevronDown className="arrow" onClick={() => scrollTo("#about")} />
     </IntroContainer>
   )
 }

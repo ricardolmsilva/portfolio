@@ -62,6 +62,29 @@ export const IntroContainer = styled.div`
       }
     }
   }
+
+  .arrow {
+    &:hover {
+      cursor: pointer;
+    }
+    font-size: 20px;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 30px;
+    animation: bounce 1s infinite alternate;
+
+    @media ${props => props.theme.breakpoints.mobile} {
+      display: none;
+    }
+  }
+  @keyframes bounce {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-7px);
+    }
+  }
 `
 
 export const ImageContainer = styled.div`
