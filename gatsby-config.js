@@ -98,18 +98,18 @@ module.exports = {
         ],
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-manifest`,
-    //   options: {
-    //     name: "Ricardo Silva",
-    //     start_url: `/`,
-    //     background_color: "#fff",
-    //     theme_color: "#fff",
-    //     display: "standalone",
-    //     short_name: "Portfolio",
-    //     icon: `src/resources/images/icon.png`,
-    //   },
-    // },
-    // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "Ricardo Silva",
+        start_url: `/`,
+        background_color: "#fff",
+        theme_color: "#fff",
+        display: "standalone",
+        short_name: "Portfolio",
+        icon: `src/resources/images/icon.png`,
+      },
+    },
+    `gatsby-plugin-offline`,
   ],
 }
