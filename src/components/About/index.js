@@ -6,20 +6,30 @@ import { useStaticQuery } from "gatsby"
 
 export default function About() {
   const {
-    airtable: {
-      data: { about },
-    },
+    allAirtable: { content },
   } = useStaticQuery(graphql`
     query {
-      airtable(table: { eq: "About Me" }) {
-        data {
-          about: Text
+      allAirtable(
+        filter: { table: { eq: "About Me" } }
+        sort: { fields: data___Date, order: DESC }
+      ) {
+        content: nodes {
+          data {
+            about: Text
+          }
         }
       }
     }
   `)
 
-  let paragraphs = about.split("\n")
+  let paragraphs = []
+  for (let text of content) {
+    const { about } = text.data
+    if (about !== null) {
+      paragraphs = about.split("\n")
+      break
+    }
+  }
 
   return (
     <AboutSection>
