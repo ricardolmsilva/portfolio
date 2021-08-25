@@ -36,16 +36,25 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `babel-plugin-styled-components`,
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          {
-            family: `Montserrat`,
-            variants: [`300`, `400`, `700`],
-          },
-        ],
+        fonts: [`montserrat\:300,400,700`],
+        display: "swap",
       },
     },
+
+    // {
+    //   resolve: `gatsby-plugin-prefetch-google-fonts`,
+    //   options: {
+    //     fonts: [
+    //       {
+    //         family: `Montserrat`,
+    //         variants: [`300`, `400`, `700`],
+    //       },
+    //     ],
+    //   },
+    // },
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
